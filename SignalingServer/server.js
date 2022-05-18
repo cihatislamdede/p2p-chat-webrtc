@@ -1,7 +1,7 @@
 var ws = require("ws");
 var WebSocketServer = ws.Server;
 
-var wss = new WebSocketServer({ port: 9090, host: "0.0.0.0" });
+var wss = new WebSocketServer({ port: 9090});
 
 var rooms = {};
 
