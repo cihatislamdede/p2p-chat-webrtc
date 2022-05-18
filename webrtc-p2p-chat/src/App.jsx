@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const ws = new WebSocket("ws://192.168.31.191:9090");
+const ws = new WebSocket("ws://localhost:9090");
 
 const config = {
   iceServers: [
