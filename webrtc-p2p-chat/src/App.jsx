@@ -77,6 +77,9 @@ ws.onmessage = async (event) => {
         window.dataChannel = event.channel;
         window.dataChannel.onopen = function () {
           console.log("data channel open");
+          document.getElementById(
+            "message-room"
+          ).innerHTML += `<h3 class="text-center border-b-2 border-green-700">Remote connected!</h3>`;
         };
         window.dataChannel.onmessage = function (event) {
           // add to chat
@@ -102,7 +105,7 @@ ws.onmessage = async (event) => {
       console.log("Remote left.");
       document.getElementById(
         "message-room"
-      ).innerHTML += `<h3 class="text-center border-b-2 border-slate-500 text-orange-300">Your peer left!</h3>`;
+      ).innerHTML += `<h3 class="text-center border-b-2 border-slate-500 text-red-600">Your peer left!</h3>`;
       document.getElementById("message-box").style.display = "none";
       document.getElementById("send-button").style.display = "none";
     default:
