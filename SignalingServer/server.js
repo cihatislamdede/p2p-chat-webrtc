@@ -12,7 +12,7 @@ wss.on("connection", function (socket) {
   //when server gets a message from a connected user
   socket.on("message", function (message) {
     var data;
-    // only JSON messages
+    // only JSON format supported
     try {
       data = JSON.parse(message);
     } catch (e) {
@@ -145,7 +145,6 @@ wss.on("connection", function (socket) {
 
 // alias to send stringified json to socket
 function sendTo(socket, message) {
-  // #TODO research why
   if (socket.readyState == ws.OPEN) {
     socket.send(JSON.stringify(message));
   } else console.log("ERR: Socket not open to send, message:", message);

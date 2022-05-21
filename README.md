@@ -5,3 +5,11 @@
 ## Package Setup
 
 ```cd .\SignalingServer\ && npm i && cd .. && cd .\webrtc-p2p-chat\ && npm i```
+
+## References
+
+[MDN WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
+
+[How does WebRTC work?](https://medium.com/agora-io/how-does-webrtc-work-996748603141)
+
+[DataChannel Reliability](https://jameshfisher.com/2017/01/17/webrtc-datachannel-reliability/)

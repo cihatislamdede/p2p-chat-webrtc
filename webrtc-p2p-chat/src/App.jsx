@@ -20,10 +20,10 @@ ws.onopen = () => {
 };
 
 ws.onmessage = async (event) => {
-  console.log(event.data); // #LOG
+  console.log(event.data);
   const data = JSON.parse(event.data);
 
-  console.log(data); // #LOG
+  console.log(data);
 
   switch (data.type) {
     // handle actions for each data type
@@ -121,7 +121,7 @@ function App() {
 
   const handleJoin = (e) => {
     e.preventDefault();
-    window.room = name; // #GLOBAL VAR
+    window.room = name; 
     ws.send(JSON.stringify({ type: "login", room: name }));
 
     setIsLobby(false);
@@ -187,7 +187,7 @@ function App() {
                 className="border w-72 border-gray-400 rounded-lg py-2 px-4 block"
               />
               <button
-                id = "send-button"
+                id="send-button"
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 w-16 rounded-lg"
               >
